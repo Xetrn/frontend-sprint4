@@ -7,7 +7,7 @@ function openModal(popup) {
 }
 
 // @todo: Функция создания карточки
-function CreateCard(name, url, addToEnd = true) {
+function createCard(name, url, addToEnd = true) {
     // @todo: Темплейт карточки
     const template = document.querySelector("#card-template").content;
     const cardElement = template.cloneNode(true);
@@ -17,6 +17,7 @@ function CreateCard(name, url, addToEnd = true) {
 
     // Наполнение карточки
 
+    cardImage.alt = name;
     cardImage.src = url;
     cardElement.querySelector(".card__title").textContent = name;
 
@@ -46,12 +47,12 @@ function CreateCard(name, url, addToEnd = true) {
 
 }
 // @todo: Вывести карточки на страницу
-initialCards.forEach((item) => CreateCard(item.name, item.link));
+initialCards.forEach((item) => createCard(item.name, item.link));
 
 // Редактирование профиля
 
-let profileEditButton = document.querySelector(".profile__edit-button");
-let profileEditModal = document.querySelector(".popup_type_edit");
+profileEditButton = document.querySelector(".profile__edit-button");
+profileEditModal = document.querySelector(".popup_type_edit");
 
 const profileNameInput = profileEditModal.querySelector(".popup__input_type_name");
 const profileDescriptionInput = profileEditModal.querySelector(".popup__input_type_description");
@@ -83,7 +84,7 @@ submitProfileEditButton.addEventListener("click", (event) => {
 const createCardModal = document.querySelector(".popup_type_new-card");
 createCardModal.classList.add("popup_is-animated");
 
-let createCardButton = document.querySelector(".profile__add-button");
+createCardButton = document.querySelector(".profile__add-button");
 createCardButton.addEventListener("click", () => { 
     openModal(".popup_type_new-card") 
 });
@@ -100,7 +101,7 @@ submitCardButton.addEventListener("click", (event) => {
     cardNameInput = createCardModal.querySelector(".popup__input_type_card-name");
     cardUrlInput = createCardModal.querySelector(".popup__input_type_url");
 
-    CreateCard(cardNameInput.value, cardUrlInput.value, false);
+    createCard(cardNameInput.value, cardUrlInput.value, false);
 
     cardNameInput.value = "";
     cardUrlInput.value = "";

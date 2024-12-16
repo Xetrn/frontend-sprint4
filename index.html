@@ -13,6 +13,7 @@
   <header class="header page__section">
     <img src="./images/logo.svg" alt="Логотип проекта масто" class="logo header__logo">
   </header>
+
   <main class="content">
     <section class="profile page__section">
       <div class="profile__image" style="background-image: url('./images/avatar.jpg');"></div>
@@ -28,11 +29,11 @@
       </ul>
     </section>
   </main>
+
   <footer class="footer page__section">
-    <p class="footer__copyright">
-      © 2021 Mesto Russia
-    </p>
+    <p class="footer__copyright">© 2021 Mesto Russia</p>
   </footer>
+
   <div class="popup popup_type_edit">
     <div class="popup__content">
       <button type="button" class="popup__close"></button>
@@ -44,6 +45,7 @@
       </form>
     </div>
   </div>
+
   <div class="popup popup_type_new-card">
     <div class="popup__content">
       <button type="button" class="popup__close"></button>
@@ -55,6 +57,7 @@
       </form>
     </div>
   </div>
+
   <div class="popup popup_type_image">
     <div class="popup__content popup__content_content_image">
       <button type="button" class="popup__close"></button>
@@ -63,8 +66,6 @@
     </div>
   </div>
 </div>
-<script src="./scripts/cards.js"></script>
-<script src="./scripts/index.js" defer></script>
 
 <template id="card-template">
   <li class="places__item card">
@@ -77,5 +78,7 @@
     </div>
   </li>
 </template>
+<script src="./scripts/cards.js"></script>
+<script src="./scripts/index.js" defer></script>
 </body>
 </html>

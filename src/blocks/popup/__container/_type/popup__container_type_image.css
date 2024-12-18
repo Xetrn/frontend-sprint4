@@ -1,0 +1,8 @@
+.popup__container_type_image{
+  position: fixed;
+  padding: 0;
+  border-radius: 0;
+  min-width: auto;
+  background: none;
+  top: 10%;
+}

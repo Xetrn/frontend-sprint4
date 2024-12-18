@@ -1,0 +1,10 @@
+.profile__headings{
+  box-sizing: border-box;
+  max-width: 305px;
+}
+
+@media screen and (max-width: 680px) {
+  .profile__headings{
+    max-width: 201px;
+  }
+}

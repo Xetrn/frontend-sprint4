@@ -1,3 +1,11 @@
 .popup__form {
   margin-top: 27px;
 }
+.popup__form .button:hover{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.popup__form .button:disabled, .popup__form .button[disabled]{
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.15);
+}

@@ -1,4 +1,5 @@
 .card__image {
+  color: white;
   height: 282px;
   object-fit: cover;
   width: 100%;

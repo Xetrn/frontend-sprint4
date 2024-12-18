@@ -38,9 +38,11 @@
       <button type="button" class="popup__close"></button>
       <h3 class="popup__title">Редактировать профиль</h3>
       <form class="popup__form" name="edit-profile">
-        <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя" required>
-        <input type="text" name="description" class="popup__input popup__input_type_description" placeholder="Занятие" required>
-        <button type="submit" class="button popup__button">Сохранить</button>
+        <input id="name-input" type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя" required minlength="2" maxlength="40">
+        <span id="name-input-error" class="popup__input_type_error popup__error_visible"></span>
+        <input id="description-input" type="text" name="description" class="popup__input popup__input_type_description" placeholder="Занятие" required minlength="2" maxlength="200">
+        <span id="description-input-error" class="popup__input_type_error popup__error_visible"></span>
+        <button type="submit" class="button popup__button popup__button_disabled">Сохранить</button>
       </form>
     </div>
   </div>
@@ -49,9 +51,11 @@
       <button type="button" class="popup__close"></button>
       <h3 class="popup__title">Новое место</h3>
       <form class="popup__form" name="new-place">
-        <input type="text" name="place-name" class="popup__input popup__input_type_card-name" placeholder="Название" required>
-        <input type="url" name="link" class="popup__input popup__input_type_url" placeholder="Ссылка на картинку" required>
-        <button type="submit" class="button popup__button">Сохранить</button>
+        <input id="place-name-input" type="text" name="place-name" class="popup__input popup__input_type_card-name" placeholder="Название" required minlength="2" maxlength="30">
+        <span id="place-name-input-error" class="popup__input_type_error popup__error_visible"></span>
+        <input id="link-input" type="url" name="link" class="popup__input popup__input_type_url" placeholder="Ссылка на картинку" required>
+        <span id="link-input-error" class="popup__input_type_error popup__error_visible"></span>
+        <button type="submit" class="button popup__button popup__button_disabled">Сохранить</button>
       </form>
     </div>
   </div>
@@ -63,8 +67,8 @@
     </div>
   </div>
 </div>
-<script src="./scripts/cards.js"></script>
-<script src="./scripts/index.js" defer></script>
+<script type="module" src="./scripts/cards.js"></script>
+<script type="module" src="./scripts/index.js" defer></script>
 
 <template id="card-template">
   <li class="places__item card">

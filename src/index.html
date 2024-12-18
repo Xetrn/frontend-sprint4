@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="header">
+      <img class="header__logo" src="./images/logo.svg" alt="Место">
+    </header>
+
+    <main class="content">
+
+      <section class="profile">
+        <img class="profile__image" src="./images/avatar.jpg" alt="Аватар">
+        <div class="profile__info">
+          <div class="profile__headings">
+            <h1 class="profile__title">Жак-Ив Кусто</h1>
+            <p class="profile__subtitle">Исследователь океана</p>
+          </div>
+          <button type="button" class="profile__edit-button"></button>
+        </div>
+        <button type="button" class="profile__add-button"></button>
+      </section>
+
+      <section class="elements">
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">&#169; Худоерко Богдан 2024. Mesto Russia</p>
+    </footer>
+
+    <section class="popup popup_type_edit-profile" id="popup-edit">
+      <div class="popup__background"></div>
+      <div class="popup__container">
+        <form class="popup__form" name="form" id="popup-edit-form">
+          <button type="reset" class="popup__close-button"></button>
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <label class="popup__input-label">
+            <input id="popup-edit-profie-name-input" name="name" class="popup__input popup__input_name"
+              placeholder="Имя" type="text" minlength="2" maxlength="40" required>
+          </label>
+
+          <label class="popup__input-label">
+            <input id="popup-edit-profie-job-input" name="job" class="popup__input popup__input_job"
+              placeholder="Профессия" type="text" minlength="2" maxlength="200" required>
+          </label>
+
+          <button type="submit" class="popup__save-button" id="edit-profile">Сохранить</button>
+
+        </form>
+      </div>
+    </section>
+
+    <section class="popup popup_type_add-card" id="popup-add">
+      <div class="popup__background"></div>
+      <div class="popup__container">
+        <form class="popup__form" name="form" id="popup-add-form">
+
+          <button type="reset" class="popup__close-button"></button>
+          <h2 class="popup__title">Новое место</h2>
+          <label class="popup__input-label">
+            <input id="popup-add-card-place-input" name="place" class="popup__input popup__input_type_place"
+              placeholder="Название" type="text" minlength="2" maxlength="30" required value="">
+          </label>
+
+          <label class="popup__input-label">
+            <input id="popup-add-card-url-input" name="url" class="popup__input popup__input_type_url"
+              placeholder="Ссылка на картинку" type="url" required value="">
+          </label>
+          <button type="submit" class="popup__save-button" id="add-card">Создать</button>
+
+        </form>
+      </div>
+    </section>
+
+    <section class="popup popup_type_image" id="popup-expand-image">
+      <div class="popup__background"></div>
+      <div class="popup__container popup__container_type_image">
+        <button type="reset" class="popup__close-button"></button>
+        <figure class="popup__figure">
+          <img class="popup__image">
+          <figcaption class="popup__figure-caption"></figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </div>
+
+  <template class="template-card">
+    <figure class="element">
+      <button type="button" class="element__del-button" name="deleteButton"></button>
+      <img class="element__image">
+      <figcaption class="element__text">
+        <h4 class="element__title"></h4>
+        <button type="button" class="element__like-button" name="likeButton"></button>
+      </figcaption>
+    </figure>
+  </template>
+
+  <script src="./script/init.js"></script>
+  <script src="./script/index.js"></script>
+  <script src="./script/validate.js"></script>
+</body>
+
+</html>

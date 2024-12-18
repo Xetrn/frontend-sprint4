@@ -1,0 +1,22 @@
+.popup__input-error_status_active {
+    display: block;
+    min-width: 164px;
+    max-height: 12px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ff0000;
+    padding: 0;
+    position: absolute;
+    top: 52px;
+}
+  
+@media screen and (max-width: 580px) {
+    .popup__input-error_status_active {
+      top: 32px;
+      left: 15px;
+    }
+}
+  

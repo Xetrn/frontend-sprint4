@@ -1,0 +1,17 @@
+@import url('__del-button/element__del-button.css');
+@import url('__like-button/element__like-button.css');
+@import url('__image/element__image.css');
+@import url('__title/element__title.css');
+@import url('__text/element__text.css');
+@import url('__like-button/_status/element__like-button_status_active.css');
+
+
+.element{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: white;
+  max-width: 282px;
+  position: relative;
+}

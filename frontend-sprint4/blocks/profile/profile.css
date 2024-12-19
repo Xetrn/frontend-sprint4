@@ -1,0 +1,22 @@
+@import url('./_description/profile_description.css');
+@import url('./_add-button/profile_add-button.css');
+@import url('./_edit-button/profile_edit-button.css');
+@import url('./_info/profile_info.css');
+@import url('./_title/profile_title.css');
+@import url('./_image/profile_image.css');
+
+.profile {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 36px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .profile {
+    padding: 43px 0;
+    flex-direction: column;
+    text-align: center;
+  }
+}

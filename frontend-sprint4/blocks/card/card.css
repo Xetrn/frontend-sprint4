@@ -1,0 +1,15 @@
+@import url('./_description/card_description.css');
+@import url('./_image/card_image.css');
+@import url('./_like-button/card_like-button.css');
+@import url('./_like-button/_is-active/card_like-button_is-active.css');
+@import url('./_delete-button/card_delete-button.css');
+@import url('./_title/card_title.css');
+
+.card{
+  font-family: 'Inter', Arial, sans-serif;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+<div class="page_content">
+  <header class="header page_section">
+    <img src="./images/logo.svg" alt="Логотип проекта масто" class="logo header_logo">
+  </header>
+  <main class="content">
+    <section class="profile page_section">
+      <div class="profile_image" style="background-image: url('./images/avatar.jpg');"></div>
+      <div class="profile_info">
+        <h1 class="profile_title">Жак-Ив Кусто</h1>
+        <button class="profile_edit-button" type="button"></button>
+        <p class="profile_description">Исследователь океана</p>
+      </div>
+      <button class="profile_add-button" type="button"></button>
+    </section>
+    <section class="places page_section">
+      <ul class="places_list">
+      </ul>
+    </section>
+  </main>
+  <footer class="footer page_section">
+    <p class="footer_copyright">
+      © 2021 Mesto Russia
+    </p>
+  </footer>
+  <div class="popup popup_type_edit">
+    <div class="popup_content">
+      <button type="button" class="popup_close"></button>
+      <h3 class="popup_title">Редактировать профиль</h3>
+      <form class="popup_form" name="edit-profile">
+        <input type="text" name="name" class="popup_input popup_input_type_name" placeholder="Имя" required>
+        <input type="text" name="description" class="popup_input popup_input_type_description" placeholder="Занятие" required>
+        <button type="submit" class="button popup_button">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <div class="popup popup_type_new-card">
+    <div class="popup_content">
+      <button type="button" class="popup_close"></button>
+      <h3 class="popup_title">Новое место</h3>
+      <form class="popup_form" name="new-place">
+        <input type="text" name="place-name" class="popup_input popup_input_type_card-name" placeholder="Название" required>
+        <input type="url" name="link" class="popup_input popup_input_type_url" placeholder="Ссылка на картинку" required>
+        <button type="submit" class="button popup_button">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <div class="popup popup_type_image">
+    <div class="popup_content popup_content_content-image">
+      <button type="button" class="popup_close"></button>
+      <img src="" alt="" class="popup_image">
+      <p class="popup_caption"></p>
+    </div>
+  </div>
+</div>
+<script src="./scripts/cards.js"></script>
+<script src="./scripts/index.js" defer></script>
+
+<template id="card-template">
+  <li class="places_item card">
+    <img class="card_image" src="" alt="" />
+    <button type="button" class="card_delete-button"></button>
+    <div class="card_description">
+      <h2 class="card_title">
+      </h2>
+      <button type="button" class="card_like-button"></button>
+    </div>
+  </li>
+</template>
+</body>
+</html>

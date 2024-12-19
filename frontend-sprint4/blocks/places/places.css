@@ -1,0 +1,13 @@
+@import url(./_list/places_list.css);
+@import url(./_item/places_item.css);
+
+.places{
+  font-family: 'Inter', Arial, sans-serif;
+  padding: 15px 0 36px;
+}
+
+@media screen and (max-width: 568px){
+  .places{
+    padding: 15px 0 18px;
+  }
+}

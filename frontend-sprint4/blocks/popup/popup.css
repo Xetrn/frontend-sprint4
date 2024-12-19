@@ -1,0 +1,23 @@
+@import url('./_content/popup_content.css');
+@import url('./_content/_content/popup_content_content_image.css');
+@import url('./_close/popup_close.css');
+@import url('./_title/popup_title.css');
+@import url('./_form/popup_form.css');
+@import url('./_input/popup_input.css');
+@import url('./_button/popup_button.css');
+@import url('./_caption/popup_caption.css');
+@import url('./_image/popup_image.css');
+
+.popup {
+  font-family: 'Inter', Arial, sans-serif;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
